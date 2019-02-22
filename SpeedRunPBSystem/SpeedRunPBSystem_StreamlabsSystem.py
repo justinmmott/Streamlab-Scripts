@@ -5,12 +5,16 @@ import os
 import sys
 import json 
 import pickle
+import codecs
 
 ScriptName = "Speed Run PB Script"
 Website = "https://github.com/justinmmott/Streamlab-Scripts"
 Description = "!pb {argument} will show pb for that specific game"
 Creator = "Bulg0gi"
 Version = "1.0"
+
+configFile = "config.json"
+settings = {}
 
 def Init():
 	global settings
@@ -30,7 +34,7 @@ def Init():
 			"useCooldownMessages": False,
 			"cooldown": 20,
 			"onCooldown": "$user, $command is still on cooldown for $cd minutes!",
-			"userCooldown": 300,
+			"userCooldown": 120,
 			"onUserCooldown": "$user, $command is still on user cooldown for $cd minutes!",
 		}
 
@@ -77,6 +81,16 @@ def load_pb():
 def save_pb(obj):
 	with open('obj/' + "pb" + '.pkl', 'wb') as f:
 		pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+
+def ReloadSettings(jsonData):
+	Init()
+	return
+
+def OpenReadMe():
+	location = os.path.join(os.path.dirname(__file__), "README.txt")
+	os.startfile(location)
+	return
 
 def Tick():
 	return
