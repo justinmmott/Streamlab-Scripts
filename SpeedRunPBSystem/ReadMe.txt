@@ -13,7 +13,7 @@
  - Initialize PB's
 ===============================================================================
 
-Using Streamlabs Chatbot application, after connecting your twitch account along with a bot account, you can import this zip file to Scripts. 
+Using Streamlabs Chatbot application, after connecting your twitch account along with a bot account, you can zip this folder and then import the zip file to Scripts tab. 
 
 Use: 
 
