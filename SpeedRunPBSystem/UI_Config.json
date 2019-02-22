@@ -1,6 +1,12 @@
 {
     "output_file": "config.json",
-
+    "InitializePBs": {
+        "type": "textbox",
+        "value": "smb1 4:55 celeste 27:55",
+        "label": "Initialize PBs",
+        "tooltip": "Put in PBs in the form 'GameTitle Time GameTitle2 Time2 ...'",
+        "group": "General",
+    },
     "liveOnly": {
         "type": "checkbox",
         "value": false,
@@ -79,13 +85,5 @@
         "label": "User Cooldown Response",
         "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n $user = Username \r\n $cd = Time remaining \r\n $command = Command name",
         "group": "Cooldown"
-    },
-    "openReadMe": {
-        "type": "button",
-        "label": "Open 'Readme Me' file",
-        "tooltip": "Opens the 'Readme.txt' for this script.",
-        "function": "OpenReadMe",
-        "wsevent": "",
-        "group": ""
     }
 }
